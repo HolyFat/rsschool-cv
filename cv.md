@@ -1,4 +1,4 @@
-<!-- Headings -->
+
 ### Contact info:
  1. Nikolay Pavlenko
  2. Contacts

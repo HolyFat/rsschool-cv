@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact info</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="container-header">
+        <header>
+            <img id="profilePhoto" src="img/avatar.webp" alt="Задание было в корректном отображениие в Chrome :)"
+                 width="200px">
+            <div class="contact-info">
+                <div class="header-top">
+                    <h1>nikolay</h1>
+                    <h1>PAVLENKO</h1>
+                    <h2> Junior Web Developer</h2>
+                </div>
+                <div class="header-contact">
+                    <table class="communication">
+                        <tr>
+                            <th>Phone number</th>
+                            <th>Telegram</th>
+                            <th>Email</th>
+
+                        </tr>
+                        <tr>
+                            <td>+375257837931</td>
+                            <td>@lomprotivshokera</td>
+                            <td>nipalenko@gmail.com</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </header>
+
+    </div>
+    <main>
+        <div class="main-section">
+            <div class="main-header"><h3>My Goals</h3></div>
+            <div class="main-content">My goal is to become part of the IT community in EPAM company.
+                I want to take part in projects that will increase my level in development. Everyday I work on my own
+                project and improve my developer skills.
+                At the last month i take a freelance projects in <a href="https://kwork.ru" title="This is not my profile :)">Kwork</a>.
+                Also I want to improve my english conversation level. To do this, i visit several clubs in which people
+                communicate each other in English.
+            </div>
+        </div>
+        <div class="main-section">
+            <div class="main-header"><h3>Skills</h3></div>
+            <div class="main-content">
+                I have a little experience in HTML, CSS3, Bootstrap3,4, Javascript (jQuery), PHP, SQL. And some CMS like
+                Wordpress, Joomla. Also i worked with AWS and Google cloud platform.
+                I have experience in setup Nginx and Apache2 from scratch.
+            </div>
+        </div>
+        <div class="main-section">
+            <div class="main-header"><h3>Code Exmaple</h3></div>
+            <div class="main-content">
+
+                <pre>
+    <code>
+/**This function iterates over the array received from the database.
+Based on the obtained values, sets checkboxes in the table cells
+loaData s an array obtained from the database
+*/
+
+ var exploded;
+ var loadData;
+
+ loadData =  <?php echo(json_encode($dataFromDb)); ?>;
+
+ $.each(loadData,function(index,value){
+
+     if (index === 'id' || index === 'login' || !value) {
+         return;
+     }
+
+     exploded = value.split(',');
+
+     for (i = 0; i < exploded.length; i++) {
+
+         $('tbody th').filter(function(){
+
+             if($(this).attr('columnNumber') === index){
+
+                 $(this).parent()
+                        .find('input[week-data='+exploded[i]+']')
+                        .prop('checked', true);
+
+             }
+         })
+     }
+ );
+
+                        </code>
+                    </pre>
+            </div>
+        </div>
+        <div class="main-section">
+            <div class="main-header"><h3>My Goals</h3></div>
+            <div class="main-content">As I sad, I have a little experience in freelance projects. This is link on my profile in kwork:
+                <a href="https://kwork.ru/user/nikolaypavlenko" title="Now, this is my profile :)">NikolayPavlenko</a>
+            </div>
+        </div>
+        <div class="main-section">
+            <div class="main-header"><h3>My Certificates</h3></div>
+            <div class="main-content certificates">
+                <img src="img/javascript.jpg" alt=""> <img src="img/jquery.jpg" alt="">
+                <img src="img/php.jpg" alt=""> <img src="img/sql.jpg" alt="">
+            </div>
+        </div>
+        <div class="main-section">
+            <div class="main-header"><h3>English level</h3></div>
+            <div class="main-content">
+                When was the last time I pass English level test I had A2+ mark.
+                But from this time I try to improve my English conversation and grammar level.
+                I visit English conversation club, use an app called grammar and watch videos in English.
+            </div>
+        </div>
+    </main>
+</div>
+
+</body>
+</html>
