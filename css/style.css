@@ -109,10 +109,29 @@ table.communication td:last-child{
 .main-header{
     display: inline-block;
     vertical-align: top;
-    width: 30%;
-    text-align: center;
+    width: 19%;
+    text-align: end;
+    padding-right: 7rem;
 }
 .main-content{
     display: inline-block;
-    width: 69%;
+    width: 46%;
+    padding-left: 8rem;
+    padding-top: 1rem;
+
+}
+
+.main-content.certificates {
+   padding-top: 1.7rem;
+}
+
+.main-content.certificates img{
+    width: 49%;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+
+.main-content.certificates img:hover {
+    transform: scale(2.2);
 }
